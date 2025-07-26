@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HTML: <div class="loader"></div> */
+.spinner {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#000 0 90deg,#ccc 0 180deg);
+  animation: l21 1s infinite linear;
+}
+@keyframes l21 {
+  100% {transform: rotate(.5turn)}
+}
