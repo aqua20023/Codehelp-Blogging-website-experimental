@@ -47,7 +47,8 @@ function handlePageChange(page){
   setPage,
   totalPages,
   setTotalPages,
-  fetchBlogPosts
+  fetchBlogPosts,
+  handlePageChange
 }; 
 
 // step2 context provider

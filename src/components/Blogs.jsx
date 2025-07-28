@@ -7,7 +7,7 @@ const Blogs = () => {
   const {loading, posts} = useContext(AppContext);
   console.log("posts", posts);
   return (
-    <div>
+    <div className='w-11/12 max-w-[450px] flex flex-col gap-4 mt-[80px]'>
       {
         loading ? (<Spinner/>) : 
         (
