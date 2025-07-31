@@ -21,12 +21,12 @@ function App() {
  useEffect(()=>{
   const page = searchParam.get('page') ?? 1; 
   if(location.pathname.includes('tags')) {
-    const tag = location.pathname.split('/').at(-1).replaceAll('-','');
+    const tag = location.pathname.split('/').at(-1).replaceAll('-',' ');
     // -1 gives the last element of the link after /
     fetchBlogPosts(Number(page), tag);
   }
   else if(location.pathname.includes('category')) {
-    const category = location.pathname.split('/').at(-1).replaceAll('-','');
+    const category = location.pathname.split('/').at(-1).replaceAll('-',' ');
     fetchBlogPosts(Number(page), null, category);
   }
   else {
@@ -42,7 +42,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/blog/:id' element={<BlogPage />} />
         <Route path='/category/:category' element={<CategoryPage />} />
-        <Route path='/tag/:tag' element={<TagPage />} />
+        <Route path='/tags/:tag' element={<TagPage />} />
       </Routes>
     </div>
   )

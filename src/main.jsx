@@ -9,10 +9,12 @@ createRoot(document.getElementById('root')).render(
 
   
  
-    <AppContextProvider> 
+   
     <BrowserRouter>
+     <AppContextProvider> 
     <App />
+     </AppContextProvider>
     </BrowserRouter>
-    </AppContextProvider>
+   
   ,
 )

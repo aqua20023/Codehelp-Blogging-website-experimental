@@ -57,7 +57,7 @@ const BlogPage = () => {
           blog ? (
             <div>
             <Card  post={blog}/>
-            <h2>Related Blogs</h2>
+            <h1 className=''>Related Blogs</h1>
             <div>
             
               {relatedBlog.map((post)=>(
