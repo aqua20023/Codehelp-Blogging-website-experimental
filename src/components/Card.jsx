@@ -1,14 +1,18 @@
 import React from 'react'
 import { useContext } from 'react'
 import { AppContext } from '../context/AppContext';
-
+import { NavLink } from 'react-router-dom';
 
 const Card = ({post}) => {
   return (
         <div >
-          <p className='font-bold text-emerald-700 text-lg'>{post.title}</p>
+          <NavLink to={`/blog/${post.id}`}><span className='font-bold text-emerald-700 text-lg'>{post.title}</span></NavLink>
+          <div></div>
           <p className='text-xs text-gray-600'>
-            By <span className='italic'>{post.author}</span> on <span className='underline font-bold'>{post.category}</span>
+            By <span className='italic'>{post.author}</span> on 
+            <NavLink to={`/category/${post.category.replaceAll(" ","-")}`}>
+              <span className='underline font-bold'>{post.category}</span>
+            </NavLink>
           </p>
           <p className='text-xs'>Posted on <span className=''>{post.date}</span></p>
           <p className='text-sm mt-[10px]'>{post.content}</p>
